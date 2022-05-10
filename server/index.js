@@ -31,7 +31,9 @@ server.listen(PORT, () => console.log(`Server is running successfully on PORT ${
 
 app.use(bodyParser.json({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cors());
+app.use(cors({
+    origin: 'https://whatsapp-cloneee.netlify.app/',
+}));
 app.use('/', Routes);
 
 let users = [];
