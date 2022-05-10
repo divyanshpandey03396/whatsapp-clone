@@ -16,11 +16,11 @@ const server = http.createServer(app);
 
 const io = new Server(server,{
     cors: {
-        origin: 'http://localhost:3000',
+        origin: 'https://whatsapp-cloneee.netlify.app/',
     }, 
 });
 
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 
 const username = process.env.MONGO_USERNAME;
 const password = process.env.MONGO_PASSWORD;
