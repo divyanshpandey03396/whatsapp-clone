@@ -16,7 +16,7 @@ const server = http.createServer(app);
 
 const io = new Server(server,{
     cors: {
-        origin: 'https://whatsapp-cloneee.netlify.app/',
+        origin: 'https://whatsapp-cloneee.netlify.app',
     }, 
 });
 
@@ -32,7 +32,7 @@ server.listen(PORT, () => console.log(`Server is running successfully on PORT ${
 app.use(bodyParser.json({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors({
-    origin: '*',
+    origin: 'https://whatsapp-cloneee.netlify.app',
 }));
 app.use('/', Routes);
 
