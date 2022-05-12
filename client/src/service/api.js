@@ -1,7 +1,7 @@
   
 import axios from 'axios';
 
-const url = 'http://localhost:8000';
+const url = 'https://whatsappclonee.herokuapp.com/';
 
 export const addUser = async (data) => {
     try {
